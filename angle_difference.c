@@ -1,9 +1,8 @@
-
 // share and preach the love
 // public domain, (c) Greg Jaskiewicz 2013
 
 #define MIN_ABS(x,y) ({ __typeof(x) __a = x; __typeof(y) __b = y; fabs(__a) < fabs(__b) ? __a : __b; })
-#define MIN3_ABS(X, Y, Z) ( min_abs(min_abs(X, Y), Z) )
+#define MIN3_ABS(X, Y, Z) ( MIN_ABS(MIN_ABS(X, Y), Z) )
 
 
 inline double angle_difference(double neworientation, double oldorientation)
